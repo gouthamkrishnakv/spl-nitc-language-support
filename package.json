@@ -3,6 +3,15 @@
 	"displayName": "SPL (NITC) Language Support",
 	"description": "Syntax & Semantic Completions for Systems Programming Language",
 	"version": "0.0.1",
+	"author": {
+		"name" : "Goutham Krishna K V",
+		"email": "gauthamkrishna9991@live.com",
+		"url": "https://github.com/gauthamkrishna9991"
+	},
+	"repository": {
+		"url": "https://github.com/gauthamkrishna9991/spl-nitc-language-support"
+	},
+	"publisher": "gauthamkrishna9991",
 	"engines": {
 		"vscode": "^1.45.0"
 	},
