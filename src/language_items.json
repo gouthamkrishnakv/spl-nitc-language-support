@@ -1,0 +1,1423 @@
+{
+    "Registers" : {
+        "type" : 12,
+        "items" : [
+            {
+                "name" : "R0",
+                "insert_text" : "R0",
+                "detail" : "Register `R0`",
+                "documentation" : "#### Register `R0`"
+            },
+            {
+                "name" : "R1",
+                "insert_text" : "R1",
+                "detail" : "Register `R1`",
+                "documentation" : "#### Register `R1`"
+            },
+            {
+                "name" : "R2",
+                "insert_text" : "R2",
+                "detail" : "Register `R2`",
+                "documentation" : "#### Register `R2`"
+            },
+            {
+                "name" : "R3",
+                "insert_text" : "R3",
+                "detail" : "Register `R3`",
+                "documentation" : "#### Register `R3`"
+            },
+            {
+                "name" : "R4",
+                "insert_text" : "R4",
+                "detail" : "Register `R4`",
+                "documentation" : "#### Register `R4`"
+            },
+            {
+                "name" : "R5",
+                "insert_text" : "R5",
+                "detail" : "Register `R5`",
+                "documentation" : "#### Register `R5`"
+            },
+            {
+                "name" : "R6",
+                "insert_text" : "R6",
+                "detail" : "Register `R6`",
+                "documentation" : "#### Register `R6`"
+            },
+            {
+                "name" : "R7",
+                "insert_text" : "R7",
+                "detail" : "Register `R7`",
+                "documentation" : "#### Register `R7`"
+            },
+            {
+                "name" : "R8",
+                "insert_text" : "R8",
+                "detail" : "Register `R8`",
+                "documentation" : "#### Register `R8`"
+            },
+            {
+                "name" : "R9",
+                "insert_text" : "R9",
+                "detail" : "Register `R9`",
+                "documentation" : "#### Register `R9`"
+            },
+            {
+                "name" : "R10",
+                "insert_text" : "R10",
+                "detail" : "Register `R10`",
+                "documentation" : "#### Register `R10`"
+            },
+            {
+                "name" : "R11",
+                "insert_text" : "R11",
+                "detail" : "Register `R11`",
+                "documentation" : "#### Register `R11`"
+            },
+            {
+                "name" : "R12",
+                "insert_text" : "R12",
+                "detail" : "Register `R12`",
+                "documentation" : "#### Register `R12`"
+            },
+            {
+                "name" : "R13",
+                "insert_text" : "R13",
+                "detail" : "Register `R13`",
+                "documentation" : "#### Register `R13`"
+            },
+            {
+                "name" : "R14",
+                "insert_text" : "R14",
+                "detail" : "Register `R14`",
+                "documentation" : "#### Register `R14`"
+            },
+            {
+                "name" : "R15",
+                "insert_text" : "R15",
+                "detail" : "Register `R15`",
+                "documentation" : "#### Register `R15`"
+            },
+            {
+                "name" : "R16",
+                "insert_text" : "R16",
+                "detail" : "Register `R16`",
+                "documentation" : "#### Register `R16`\n\n**WARNING: This is a compiler-reserved Register.**"
+            },
+            {
+                "name" : "R17",
+                "insert_text" : "R17",
+                "detail" : "Register `R17`",
+                "documentation" : "#### Register `R17`\n\n**WARNING: This is a compiler-reserved Register.**"
+            },
+            {
+                "name" : "R18",
+                "insert_text" : "R18",
+                "detail" : "Register `R18`",
+                "documentation" : "#### Register `R18`\n\n**WARNING: This is a compiler-reserved Register.**"
+            },
+            {
+                "name" : "R19",
+                "insert_text" : "R19",
+                "detail" : "Register `R19`",
+                "documentation" : "#### Register `R19`\n\n**WARNING: This is a compiler-reserved Register.**"
+            },
+            {
+                "name" : "PTBR",
+                "insert_text" : "PTBR",
+                "detail" : "Page Table Base Register (PRIVILEGED)",
+                "documentation" : "### Page Table Base Register\n\nThis register points to the starting address of the Page Table.\n\n**NOTE:** It is a privileged instruction."
+            },
+            {
+                "name" : "PTLR",
+                "insert_text" : "PTLR",
+                "detail" : "Page Table Length Register (PRIVILEGED)",
+                "documentation" : "### Page Table Length Register\n\nThis register stores the length of the Page Table.\n\n**NOTE:** This is a privileged instruction."
+            },
+            {
+                "name" : "IP",
+                "insert_text" : "IP",
+                "detail" : "IP",
+                "documentation" : "### Instruction Pointer (`IP`)\n\nThis register points towards the next instruction to be executed."
+            },
+            {
+                "name" : "SP",
+                "insert_text" : "SP",
+                "detail" : "SP",
+                "documentation" : "### Stack Pointer (`SP`)\n\nThis register points to the top of the stack."
+            },
+            {
+                "name" : "BP",
+                "insert_text" : "BP",
+                "detail" : "BP",
+                "documentation" : "### Base Pointer (`BP`)\n\nThis register stores the base address of the stack."
+            },
+            {
+                "name" : "EIP",
+                "insert_text" : "EIP",
+                "detail" : "Exception Instruction Pointer (PRIVILEGED)",
+                "documentation" : "### Exception Instruction Pointer (`EIP`)\n\nStores value of IP at the point where the exception occurred.\n\n[More](https://exposnitc.github.io/arch_spec-files/interrupts_exception_handling.html#exceptions)"
+            },
+            {
+                "name" : "EPN",
+                "insert_text" : "EPN",
+                "detail" : "Exception Page Number (PRIVILEGED)",
+                "documentation" : "### Exception Page Number (`EPN`)\n\nThis field is relevant when a **Page Fault Exception** occurs. The logical page number which caused a page fault exception is stored here."
+            },
+            {
+                "name" : "EC",
+                "insert_text" : "EC",
+                "detail" : "Exception Cause (PRIVILEGED)",
+                "documentation" : "### Exception Cause (`EC`)\n\nThis field indicates a number which corresponds to cause of exception.\n\nExceptions can be caused whem the following exceptions occur:\n\n- **Page Fault**: The value stored in the `EC` register for this exception is `0`.\n- **Illegal Instruction**: The value stored in the `EC` register for this exception is `1`.\n- **Illegal Memory Access**: The value stored in the `EC` register for this exception is `2`.\n- **Arithmetic Exception**: The value stored in the `EC` register for this exceptions is `3`."
+            },
+            {
+                "name" : "EMA",
+                "insert_text" : "EMA",
+                "detail" : "Exception Memory Address (PRIVILEGED)",
+                "documentation" : "### Exception Memory Address (`EMA`)\n\n**NOTE**: Relevant only in the case of *illegal memory access*.\n\nThe illegal memory which was tried to be accessed is stored in the register. This field is relevant only when either the address referred to is outside the range `0-512 * (PTLR - 1)` or a write is attempted to a page which is read-only.\n\n[More](https://exposnitc.github.io/arch_spec-files/interrupts_exception_handling.html#exceptions)"
+            },
+            {
+                "name" : "P0",
+                "insert_text" : "P0",
+                "detail" : "P0 - Input Port (PRIVILEGED)",
+                "documentation" : "### Input Port (`P0`)\n\nA special-purpose port which reads from console."
+            },
+            {
+                "name" : "P1",
+                "insert_text" : "P1",
+                "detail" : "P1 - Output Port (PRIVILEGED)",
+                "documentation" : "### Output Port (`P1`)\n\nA special-purpose port used for standard output."
+            },
+            {
+                "name" : "P2",
+                "insert_text" : "P2",
+                "detail" : "P2 - Unused Port (PRIVILEGED)",
+                "documentation" : "### Unused Port (`P2`)\n\nSpecial Purpose port for future cases."
+            },
+            {
+                "name" : "P3",
+                "insert_text" : "P3",
+                "detail" : "P3 - Unused Port (PRIVILEGED)",
+                "documentation" : "### Unused Port (`P3`)\n\nSpecial Purpose port for future cases."
+            }
+        ]
+
+    },
+    "Keywords": {
+        "type" : 13,
+        "items": [
+            {
+                "name" : "alias",
+                "insert_text" : "alias",
+                "detail" : "alias alias_name register_name;",
+                "documentation" : "#### Alias Statement `alias`\n\nAn `alias` statement is used to associate a register/port with a name.\n\nAlias statements can be used anywhere in the program.\n\n    alias counter R0;"
+            },
+            {
+                "name" : "define",
+                "insert_text": "define",
+                "detail" : "define constant_name value",
+                "documentation" : "#### Define Statement `define`\n\nThe `define` statement is used to define a symbolic name for a value.\n\nDefine statements should be used before any other statement in an SPL program. The keyword define is used to associate a literal to a symbolic name.\n\n    define DISK_BLOCK 437;"
+            },
+            {
+                "name" : "breakpoint",
+                "insert_text": "breakpoint;",
+                "detail" : "breakpoint;",
+                "documentation" : "#### Breakpoint Statement `breakpoint`\n\nThe `breakpoint` statement is used to debug the program.\n\nThe program when run in the debug mode pauses the execution at this instruction."
+            },
+            {
+                "name" : "break",
+                "insert_text" : "break;",
+                "detail" : "break;",
+                "documentation" : "#### `break` Statement\n\n`break` statement when used inside a `while` loop block, stops the execution of the loop in which it is used and passes the control of execution to the next statement after the loop. This statement cannot be used anywhere else other than `while` loop.\n\n    break;"
+            },
+            {
+                "name" : "continue",
+                "insert_text": "continue;",
+                "detail" : "continue;",
+                "documentation" : "#### `continue` Statement\n\n`continue` statement when used inside a `while` loop block, skips the current iteration of the loop and passes the control to the next iteration after checking the loop condition.\n\n    continue;"
+            },
+            {
+                "name" : "ireturn",
+                "insert_text": "ireturn;",
+                "detail": "ireturn;",
+                "documentation" : "#### Interrupt Return Statement\n\n`ireturn` statement or the **Interrupt Return Statement** is used to pass control from a kernel mode interrupt service routine to the user mode program which invoked it."
+            },
+            {
+                "name" : "read",
+                "insert_text" : "read;",
+                "detail" : "read; // This is asynchronous",
+                "documentation" : "#### `read` Statement\n\nThe read statement initiates the transfer of a string from console to the standard input port `P0` using the `IN` machine instruction.\n\nThe machine proceeds to execute the next instruction without waiting for the completion of the string transfer.\n\n**NOTE: String read must not exceed 10 characters.**"
+            },
+            {
+                "name" : "print",
+                "insert_text" : "print",
+                "detail" : "print register/number/string/expression/[address]",
+                "documentation" : "#### `print` Statement\n\nThe print statement outputs the value of a `register` or an `integer` or `string literal` or value of a memory location.\n\n    print [R0];"
+            },
+            {
+                "name" : "backup",
+                "insert_text" : "backup;",
+                "detail" : "backup;",
+                "documentation" : "#### `backup` Statement\n\nThe `backup` statement is used to backup all the machine registers (except `SP`, `IP`, execution flag registers and ports) into the memory locations starting from the address pointed to by `SP` in the order: `BP`,`PTBR`, `PTLR`,`R0`-`R19`.\n\nThe value of `SP` gets incremented accordingly.\n\n    backup;"
+            },
+            {
+                "name" : "restore",
+                "insert_text" : "restore;",
+                "detail" : "restore;",
+                "documentation" : "#### `restore` Statement\n\nThe `restore statement is used to backup the machine registers from the memory.\n\nThe registers are restored from contiguous memory locations starting from address pointed to by `SP` in the order: `R19`-`R0`,`PTLR`,`PTBR`,`BP`.\n\nThe value of `SP` gets decremented accordingly.\n\n    restore;"
+            },
+            {
+                "name" : "encrypt",
+                "insert_text" : "encrypt",
+                "detail" : "encrypt Ri;",
+                "documentation" : "#### `encrypt` Statement\n\nThe `encrypt` statement replaces the value in register `Ri` with its encrypted value.\n\n    encrypt R0"
+            },
+            {
+                "name" : "goto",
+                "insert_text": "goto",
+                "detail" : "goto label / INT_n / MOD_n / constants;",
+                "documentation" : "#### `goto` Statement\n\nThe `goto` statement transfers control to the specified labelled statement.\n\n*Note: `label` should be defined within the module.*\n\n    goto label1;\n\n    goto INT_7;    \n\n    goto MOD_2`\n\n    goto MEMORY_MANAGER;"
+            },
+            {
+                "name" : "call",
+                "insert_text" : "call",
+                "detail" : "call label / INT_n / MOD_n / constants;",
+                "documentation" : "#### `call` Statement\n\n The call statement saves procedure linking information on the stack and branches to the procedure specified by the argument.\n\n**NOTE:**ca `label` should be defined within the module.\n\n    call swap_func;\n    call INT_7;\n    call MOD_2;\n    call MEMORY_MANAGER;"
+            },
+            {
+                "name" : "return",
+                "insert_text" : "return;",
+                "detail" : "return;",
+                "documentation" : "#### `return` Statement\n\n The `return` statement is used to transfer the control from a subroutine to the calling program in the kernel mode and the return address is popped from the stack.\n\n    return;"
+            }
+        ]
+    },
+    "Interrupts": {
+        "type" : 22,
+        "items" : [
+            {
+                "name" : "EX_HANDLER",
+                "insert_text" : "EX_HANDLER",
+                "detail" : "EX_HANDLER = 1024",
+                "documentation" : "##### Exception Handler\n\nStarting address of the exception handler.\n\n[More](https://exposnitc.github.io/os_design-files/exe_handler.html)"
+            },
+            {
+                "name" : "EXCEPTION",
+                "insert_text" : "EXCEPTION",
+                "detail" : "EXCEPTION = EX_HANDLER = 1024",
+                "documentation" : "##### Exception Handler\n\nStarting address of the exception handler.\n\n[More](https://exposnitc.github.io/os_design-files/exe_handler.html)"
+            },
+            {
+                "name" : "TIMER",
+                "insert_text": "TIMER",
+                "detail" : "TIMER = 2048",
+                "documentation" : "##### Timer Interrupt\n\nStarting address of the Timer Interrupt Routine.\n\n[More](https://exposnitc.github.io/os_design-files/timer.html)"
+            },
+            {
+                "name" : "DISK",
+                "insert_text" : "DISK",
+                "detail" : "DISK = 3072",
+                "documentation" : "##### Disk Interrupt\n\nStarting address of Disk Controller Interrupt Routine\n\n[More](https://exposnitc.github.io/os_design-files/disk_interrupt.html)"
+            },
+            {
+                "name" : "CONSOLE",
+                "insert_text" : "CONSOLE",
+                "detail" : "CONSOLE = 4096",
+                "documentation" : "##### Console (Terminal) Interrupt Handler\n\nStarting address of Console Interrupt Routine\n\n[More](https://exposnitc.github.io/os_design-files/term_handler.html)"
+            },
+            {
+                "name" : "INT_4",
+                "insert_text" : "INT_4",
+                "detail" : "INT_4 = 5120",
+                "documentation" : "##### Interrupt 4 (`INT_4`)\n\nTwo routines are included:\n\n- [Create - 1](https://exposnitc.github.io/os_design-files/term_handler.html)\n- [Delete - 4](https://exposnitc.github.io/os_design-files/delete.html)"
+            },
+            {
+                "name" : "INT_5",
+                "insert_text" : "INT_5",
+                "detail" : "INT_5 = 6144",
+                "documentation" : "##### Interrupt 5 (`INT_5`)\n\nThree routines are included:\n\n- [Seek - 6](https://exposnitc.github.io/os_design-files/seek.html)\n- [Open - 2](https://exposnitc.github.io/os_design-files/open.html)\n- [Close - 3](https://exposnitc.github.io/os_design-files/close.html)"
+            },
+            {
+                "name" : "INT_6",
+                "insert_text" : "INT_6",
+                "detail" : "INT_6 = 7168 (READ ROUTINE)",
+                "documentation" : "##### Interrupt 6 (`INT_6`)\n\nInterrupt 6 is the **READ** routine.\n\n- [Read - 7](https://exposnitc.github.io/os_design-files/read.html)"
+            },
+            {
+                "name" : "INT_7",
+                "insert_text" : "INT_7",
+                "detail" : "INT_7 = 8192 (WRITE ROUTINE)",
+                "documentation" : "##### Interrupt 7 (`INT_7`)\n\nInterrupt 7 is the **WRITE** routine.\n\n- [Write - 5](https://exposnitc.github.io/os_design-files/write.html)"
+            },
+            {
+                "name" : "INT_8",
+                "insert_text" : "INT_8",
+                "detail" : "INT_8 = 9216 (FORK ROUTINE)",
+                "documentation" : "##### Interrupt 8 (`INT_8`)\n\nInterrupt 8 is the **FORK** routine.\n\n- [Fork - 8](https://exposnitc.github.io/os_design-files/fork.html)"
+            },
+            {
+                "name" : "INT_9",
+                "insert_text" : "INT_9",
+                "detail" : "INT_9 = 10240 (EXEC ROUTINE)",
+                "documentation" : "##### Interrupt 9 (`INT_9`)\n\nInterrupt 9 is the **EXEC** routine.\n\n- [Exec - 9](https://exposnitc.github.io/os_design-files/exec.html)"
+            },
+            {
+                "name" : "INT_10",
+                "insert_text" : "INT_10",
+                "detail" : "INT_10 = 11264 (EXIT ROUTINE)",
+                "documentation" : "##### Interrupt 10 (`INT_10`)\n\nInterrupt 10 is the **EXIT** routine.\n\n- [Exit - 10](https://exposnitc.github.io/os_design-files/exec.html)"
+            },
+            {
+                "name" : "INT_11",
+                "insert_text" : "INT_11",
+                "detail" : "INT_11 - 12288 (PROCESS INTERRUPTS)",
+                "documentation" : "##### Interrupt 11 (`INT_11`)\n\nInterrupt 11 consists of process and synchronization routines.\n\n- [Getpid - 11](https://exposnitc.github.io/os_design-files/proc_misc.html#getpid)\n- [Getppid - 12](https://exposnitc.github.io/os_design-files/proc_misc.html#getppid)\n- [Wait - 13](https://exposnitc.github.io/os_design-files/synchronization_algos.html#wait)\n- [Signal - 14](https://exposnitc.github.io/os_design-files/synchronization_algos.html#signal)"
+            },
+            {
+                "name" : "INT_12",
+                "insert_text" : "INT_12",
+                "detail" : "INT_12 - 12288 (LOGOUT ROUTINE)",
+                "documentation" : "##### Interrupt 12 (`INT_12`)\n\nInterrupt 12 is the **LOGOUT** routine.\n\n- [Logout - 28](https://exposnitc.github.io/os_design-files/multiusersyscalls.html#logout)"
+            },
+            {
+                "name" : "INT_13",
+                "insert_text" : "INT_13",
+                "detail" : "INT_13 - 14336 (SEMAPHORE INTERRUPTS - I)",
+                "documentation" : "##### Interrupt  13 (`INT_13`)\n\nInterrupt 13 consists of semaphore management system-calls.\n\n- [SemGet - 17](https://exposnitc.github.io/os_design-files/semaphore_algos.html#semget)\n- [SemRelease - 18](https://exposnitc.github.io/os_design-files/semaphore_algos.html#semrelease)"
+            },
+            {
+                "name" : "INT_14",
+                "insert_text" : "INT_14",
+                "detail" : "INT_14 - 15360 (SEMAPHORE INTERRUPTS - II)",
+                "documentation" : "##### Interrupt 14 (`INT_14`)\n\nInterrupt 14 consists of routines for locking and unlocking semaphores for resource/file management.\n\n- [SemLock - 19](https://exposnitc.github.io/os_design-files/semaphore_algos.html#semlock)\n- [SemUnlock](https://exposnitc.github.io/os_design-files/semaphore_algos.html#semunlock)"
+            },
+            {
+                "name" : "INT_15",
+                "insert_text" : "INT_15",
+                "detail" : "INT_15 - 16384 (SHUTDOWN ROUTINE)",
+                "documentation" : "##### Interrupt 15 (`INT_15`)\n\nInterrupt 15 is the shutdown routine. It is used to 'shut down' or halt the system.\n\n- [Shutdown - 21](https://exposnitc.github.io/os_design-files/shutdown.html)"
+            },
+            {
+                "name" : "INT_16",
+                "insert_text" : "INT_16",
+                "detail" : "INT_16 - 17408 (USER MANAGEMENT SYSCALLS)",
+                "documentation" : "##### Interrupt 17 (`INT_17`)\n\nInterrupt 17 manages subroutines for user management.\n\n- [Newusr 22](https://exposnitc.github.io/os_design-files/multiusersyscalls.html#newusr)\n- [Remusr - 23](https://exposnitc.github.io/os_design-files/multiusersyscalls.html#remusr)\n- [Setpwd 24](https://exposnitc.github.io/os_design-files/multiusersyscalls.html#setpwd)\n- [Getuname - 25](https://exposnitc.github.io/os_design-files/multiusersyscalls.html#getuname)\n- [Getuid - 26](https://exposnitc.github.io/os_design-files/multiusersyscalls.html#getuid)"
+            },
+            {
+                "name" : "INT_17",
+                "insert_text" : "INT_17",
+                "detail" : "INT_17 - 18432 (LOGIN ROUTINE)",
+                "documentation" : "##### Interrupt 18 (`INT_18`)\n\nInterrupt 18 is the login routine interrupt.\n\n"
+            },
+            {
+                "name" : "INT_18",
+                "insert_text" : "INT_18",
+                "detail" : "INT_18 - 19456 - TEST ROUTINES",
+                "documentation" : "##### Interrupt 18 (`INT_18`)\n\nThis routine is kept for Laboratory Test purposes.\n\n- Test0 - 96\n- Test1 - 97\n- Test2 - 98\n- Test3 - 99"
+            }
+        ]
+    },
+    "Modules" : {
+        "type" : 8,
+        "items" : [
+            {
+                "name" : "MOD_0",
+                "insert_text" : "MOD_0",
+                "detail" : "MOD_0 = 20480",
+                "documentation" : "#### Resource Manager (`MOD_0`)\n\nThis module is responsible for allocating and releasing different resources.\n\n*Note that the `terminal` and `disk` devices are freed by the corresponding interrupt handlers.*\n\n[More](https://exposnitc.github.io/os_modules/Module_0.html)"
+            },
+            {
+                "name" : "RESOURCE_MANAGER",
+                "insert_text" : "RESOURCE_MANAGER",
+                "detail" : "MOD_0 = 20480",
+                "documentation": "#### Resource Manager (`MOD_0`)\n\nThis module is responsible for allocating and releasing different resources.\n\n**Note**:`terminal` and `disk` devices are freed by the corresponding interrupt handlers.*\n\n[More](https://exposnitc.github.io/os_modules/Module_0.html)"
+            },
+            {
+                "name" : "MOD_1",
+                "insert_text" : "MOD_1",
+                "detail" : "MOD_1 = 21504",
+                "documentation" : "#### Process Manager (`MOD_1`)\n\nThis module contains functions that manage the different aspects related to processes.\n\n[More](https://exposnitc.github.io/os_modules/Module_1.html)"
+            },
+            {
+                "name" : "PROCESS_MANAGER",
+                "insert_text" : "PROCESS_MANAGER",
+                "detail" : "PROCESS_MANAGER = MOD_1 = 21504",
+                "documentation" : "#### Process Manager (`MOD_1`)\n\nThis module contains functions that manage the different aspects related to processes.\n\n[More](https://exposnitc.github.io/os_modules/Module_1.html)"
+            },
+            {
+                "name" : "MOD_2",
+                "insert_text" : "MOD_2",
+                "detail" : "MOD_2 = 22528",
+                "documentation" : "#### Memory Manager (`MOD_2`)\n\nThis module handles allocation and deallocation of memory pages. The memory free list entry denotes the number of processes using (sharing) the memory page. Unused pages are therefore indicated by `0` in the corresponding entry in `memory free list`.\n\n[More](https://exposnitc.github.io/os_modules/Module_2.html)"
+            },
+            {
+                "name" : "MEMORY_MANAGER",
+                "insert_text" : "MEMORY_MANAGER",
+                "detail" : "MEMORY_MANAGER = MOD_2 = 22528",
+                "documentation" : "#### Memory Manager (`MOD_2`)\n\nThis module handles allocation and deallocation of memory pages.\n\nThe memory free list entry denotes the number of processes using (sharing) the memory page. Unused pages are therefore indicated by `0` in the corresponding entry in `memory free list`.\n\n[More](https://exposnitc.github.io/os_modules/Module_2.html)"
+            },
+            {
+                "name" : "MOD_3",
+                "insert_text" : "MOD_3",
+                "detail" : "MOD_3 = 22528",
+                "documentation" : "#### File Manager (`MOD_3`)\n\nThis module contains the functions that manages files.\n\n**NOTE**: All functions in this module expect that the inode is locked before they are called.\n\n[More](https://exposnitc.github.io/os_modules/Module_3.html)"
+            },
+            {
+                "name" : "FILE_MANAGER",
+                "insert_text" : "FILE_MANAGER",
+                "detail" : "FILE_MANAGER = MOD_3 = 22528",
+                "documentation" : "#### File Manager (`MOD_3`)\n\nThis module contains the functions that manages files.\n\n**NOTE**: All functions in this module expect that the inode is locked before they are called.\n\n[More](https://exposnitc.github.io/os_modules/Module_3.html)"
+            },
+            {
+                "name" : "MOD_4",
+                "insert_text" : "MOD_4",
+                "detail" : "MOD_4 = 24576",
+                "documentation" : "#### Device Manager (`MOD_4`)\n\nHandles Terminal I/O and Disk operations (Load and Store).\n\n[More](exposnitc.github.io/os_modules/Module_4.html)"
+            },
+            {
+                "name" : "DEVICE_MANAGER",
+                "insert_text" : "DEVICE_MANAGER",
+                "detail" : "DEVICE_MANAGER = MOD_4 = 24576",
+                "documentation" : "#### Device Manager (`MOD_4`)\n\nHandles Terminal I/O and Disk operations (Load and Store).\n\n[More](exposnitc.github.io/os_modules/Module_4.html)"
+            },
+            {
+                "name" : "MOD_5",
+                "insert_text" : "MOD_5",
+                "detail" : "MOD_5 = 256000",
+                "documentation" : "#### Context Switch (Scheduler) Module (`MOD_5`)\n\nYields control from the current process and schedules the next process for execution.\n\n[More](https://exposnitc.github.io/os_modules/Module_5.html)"
+            },
+            {
+                "name" : "CONTEXT_SWITCH",
+                "insert_text" : "CONTEXT_SWITCH",
+                "detail" : "CONTEXT_SWITCH = SCHEDULER = MOD_5 = 256000",
+                "documentation" : "#### Context Switch (Scheduler) Module (`MOD_5`)\n\nYields control from the current process and schedules the next process for execution.\n\n[More](https://exposnitc.github.io/os_modules/Module_5.html)"
+            },
+            {
+                "name" : "SCHEDULER",
+                "insert_text" : "SCHEDULER",
+                "detail" : "SCHEDULER = CONTEXT_SWITCH = MOD_5 = 256000",
+                "documentation" : "#### Context Switch (Scheduler) Module (`MOD_5`)\n\nYields control from the current process and schedules the next process for execution.\n\n[More](https://exposnitc.github.io/os_modules/Module_5.html)"
+            },
+            {
+                "name" : "MOD_6",
+                "insert_text" : "MOD_6",
+                "detail" : "MOD_6 = 26624",
+                "documentation" : "#### Pager Module (`MOD_6`)\n\nThis module is responsible for swapping in and out processes. Swap-out is initiated from the timer interrupt when the free memory is critically low. Similiarly, if there is enough memory available in the system, swap-in is initiated by the timer.\n\n[More](https://exposnitc.github.io/os_modules/Module_6.html)"
+            },
+            {
+                "name" : "PAGER_MODULE",
+                "insert_text" : "PAGER_MODULE",
+                "detail" : "PAGER_MODULE = MOD_6 = 26624",
+                "documentation" : "#### Pager Module (`MOD_6`)\n\nThis module is responsible for swapping in and out processes. Swap-out is initiated from the timer interrupt when the free memory is critically low. Similiarly, if there is enough memory available in the system, swap-in is initiated by the timer.\n\n[More](https://exposnitc.github.io/os_modules/Module_6.html)"
+            },
+            {
+                "name" : "MOD_7",
+                "insert_text" : "MOD_7",
+                "detail" : "MOD_7 = 27648",
+                "documentation" : "#### Boot Module (`MOD_7`)\n\n This module is responsible for hand creating the `INIT` and `SHELL` processes.\n\nIt loads the modules, interrupt routines and disk data structures which are required by eXpOS from disk to memory. It also initializes different memory data structures which are required to run the OS smoothly. Boot module is invoked only once by the OS Startup code at the time of booting.\n\n[More](https://exposnitc.github.io/os_modules/Module_7.html)"
+            },
+            {
+                "name" : "BOOT_MODULE",
+                "insert_text" : "BOOT_MODULE",
+                "detail" : "BOOT_MODULE = MOD_7 = 27648",
+                "documentation" : "#### Boot Module (`MOD_7`)\n\n This module is responsible for hand creating the `INIT` and `SHELL` processes.\n\nIt loads the modules, interrupt routines and disk data structures which are required by eXpOS from disk to memory. It also initializes different memory data structures which are required to run the OS smoothly. Boot module is invoked only once by the OS Startup code at the time of booting.\n\n[More](https://exposnitc.github.io/os_modules/Module_7.html)"
+            }
+        ]
+    },
+    "Syscalls" : {
+        "type" : 20,
+        "items" : [
+            {
+                "name" : "INT_CREATE",
+                "insert_text" : "INT_CREATE",
+                "detail" : "Create System Call = 1",
+                "documentation" : "#### Create System Call\n\nReturns `0` on success/file exists, `1` if no free inode table entry.\n\nArguments:\n\n- `filename (str)`\n- `permission (0: EXCLUSIVE/1: OPEN_ACCESS)`\n\n[More](https://exposnitc.github.io/os_design-files/create.html)"
+            },
+            {
+                "name" : "INT_OPEN",
+                "insert_text" : "INT_OPEN",
+                "detail" : "Open System Call = 2",
+                "documentation" : "#### Open System Call\n\nOpen operation returns a file descriptor which identifies the open instance of the file.\n\nArguments:\n\n- `filename (str)`\n\n[More](https://exposnitc.github.io/os_design-files/open.html)"
+            },
+            {
+                "name" : "INT_CLOSE",
+                "insert_text" : "INT_CLOSE",
+                "detail": "Close System Call = 3",
+                "documentation" : "#### Close System Call\n\nCloses an open file. The file descriptor ceases to be valid once this is called.\n\nArguments:\n\n- `file descriptor (int)`\n\n[More](https://exposnitc.github.io/os_design-files/close.html)"
+            },
+            {
+                "name" : "INT_DELETE",
+                "insert_text" : "INT_DELETE",
+                "detail" : "Delete System Call = 4",
+                "documentation" : "#### Delete System Call\n\nDelete takes a file name as input and deletes it.\n\nArguments:\n\n- `filename (str)`\n\n[More](https://exposnitc.github.io/os_design-files/delete.html)"
+            },
+            {
+                "name" : "INT_WRITE",
+                "insert_text" : "INT_WRITE",
+                "detail" : "Write System Call = 5",
+                "documentation" : "#### Write System Call\n\nWrites a word to the file descriptor.\n\nArguments:\n\n- `file_descriptor(int)`\n- `write word`\n\n[More](https://exposnitc.github.io/os_design-files/write.html)"
+            },
+            {
+                "name" : "INT_SEEK",
+                "insert_text" : "INT_SEEK",
+                "detail" : "Seek System Call = 6",
+                "documentation" : "#### Seek System Call\n\nSeek operation allows to change the file pointer so that Rd/Wrt can be done from a new position in the file.\n\nArguments:\n\n- `file_descriptor(int)`\n- `offset(int)`\n\n[More](https://exposnitc.github.io/os_design-files/seek.html)"
+            },
+            {
+                "name" : "INT_READ",
+                "insert_text" : "INT_READ",
+                "detail" : "Read System Call = 7",
+                "documentation" : "#### Read System Call\n\nReads one word from the position pointed by the file pointer and stores it into the buffer. Pointer advanced automatically after read.\n\nArguments:\n\n- `file_descriptor(int)`\n- `offset(int)`\n\n[More](http://exposnitc.github.io/os_design-files/read.html)"
+            },
+            {
+                "name" : "INT_FORK",
+                "insert_text" : "INT_FORK",
+                "detail" : "Fork System Call = 8",
+                "documentation" : "#### Fork System Call\n\nReplicates the process invoking the syscall. The heap, code and library regions of the parent is shared by the child, but new stack is allocated to the latter.\n\nArguments: None\n\n[More](https://exposnitc.github.io/os_design-files/fork.html)"
+            },
+            {
+                "name" : "INT_EXEC",
+                "insert_text" : "INT_EXEC",
+                "detail" : "Exec System Call = 9",
+                "documentation" : "#### Exec System Call\n\nDestroys the present process and loads the executable file given as input into a new memory address space.\n\n[More](https://exposnitc.github.io/os_design-files/exec.html)"
+            },
+            {
+                "name" : "INT_EXIT",
+                "insert_text" : "INT_EXIT",
+                "detail" : "Exit System Call = 10",
+                "documentation" : "#### Exit System Call\n\nExit system call terminates the executation of the process which invoked it and destroys its memory address space. The calling application ceases to exists so the system-call never returns.\n\n[More](https://exposnitc.github.io/os_design-files/exec.html)"
+            },
+            {
+                "name" : "INT_GETPID",
+                "insert_text" : "INT_GETPID",
+                "detail" : "GetPID System Call = 11",
+                "documentation" : "#### GetPID System Call\n\nReturns a process identifier of the invoking process. This system call does not fail.\n\n[More](https://exposnitc.github.io/os_design-files/proc_misc.html#getpid)"
+            },
+            {
+                "name" : "INT_GETPPID",
+                "insert_text" : "INT_GETPPID",
+                "detail" : "Get ParentPID System Call = 12",
+                "documentation" : "#### Get Parent PID System Call\n\nReturns to the calling process the value of the process identifier of its parent. The system call does not fail.\n\n[More](https://exposnitc.github.io/os_design-files/proc_misc.html#getppid)"
+            },
+            {
+                "name" : "INT_WAIT",
+                "insert_text" : "INT_WAIT",
+                "detail" : "Wait System Call = 13",
+                "documentation" : "#### Wait System Call\n\nThe current process is blocked till the process with PID given as argument executes a system call or exits.\n\n[More](https://exposnitc.github.io/os_design-files/synchronization_algos.html#wait)"
+            },
+            {
+                "name" : "INT_SIGNAL",
+                "insert_text" : "INT_SIGNAL",
+                "detail" : "Signal System Call = 14",
+                "documentation" : "#### Signal System Call\n\nAll process for the signalling process are resumed.\n\n[More](https://exposnitc.github.io/os_design-files/synchronization_algos.html#signal)"
+            },
+            {
+                "name" : "INT_SEMGET",
+                "insert_text" : "INT_SEMGET",
+                "detail" : "SemGet System Call = 17",
+                "documentation" : "#### Semget System Call\n\nUsed to obtain a binary semaphore.\n\n[More[(https://exposnitc.github.io/os_design-files/semaphore_algos.html#semget)"
+            },
+            {
+                "name" : "INT_SEMRELEASE",
+                "insert_text" : "INT_SEMRELEASE",
+                "detail" : "SemRelease System Call  = 18",
+                "documentation" : "#### SemRelease System Call\n\nUsed to release a semaphore descriptor held by the process.\n\n[More](https://exposnitc.github.io/os_design-files/semaphore_algos.html#semrelease)"
+            },
+            {
+                "name" : "INT_SEMLOCK",
+                "insert_text" : "INT_SEMLOCK",
+                "detail" : "SemLock System Call = 19",
+                "documentation" : "#### SemLock System Call\n\nIt is used to lock the semaphore. If the semaphore is already locked by some other process, then the calling process goes to sleep and wakes up only when semaphore is ulocked.\n\n[More](https://exposnitc.github.io/os_design-files/semaphore_algos.html#semlock)"
+            },
+            {
+                "name" : "INT_SEMUNLOCK",
+                "insert_text" : "INT_SEMUNLOCK",
+                "detail" : "SemUnlock System Call = 20",
+                "documentation" : "#### SemUnlock System Call\n\nThe semunlock system call is used to unlock a semaphore that was previously locked by the calling process.\n\n[More](https://exposnitc.github.io/os_design-files/semaphore_algos.html#semunlock)"
+            },
+            {
+                "name" : "INT_SHUTDOWN",
+                "insert_text" : "INT_SHUTDOWN",
+                "detail" : "Shutdown System Call = 21",
+                "documentation" : "#### Shutdown System Call\n\nThe shutdown system call is used to halt the system. It can be invoked only from the shell of root user. It terminates all the running processes, commits back the disk data and halts the system.\n\n[More](https://exposnitc.github.io/os_design-files/shutdown.html)"
+            },
+            {
+                "name" : "INT_NEWUSR",
+                "insert_text" : "INT_NEWUSR",
+                "detail" : "New User System Call = 22",
+                "documentation" : "#### Newusr System Call\n\nThis system call is used to create new user. IF user doesn't already exist, it creates a new iser woth the username and password specified.\n\n[Moew](https://exposnitc.github.io/os_design-files/multiusersyscalls.html#newusr)"
+            },
+            {
+                "name" : "INT_REMUSR",
+                "insert_text" : "INT_REMUSR",
+                "detail" : "Remove User System Call = 23",
+                "documentation" : "#### Remusr System Call\n\nThis system call is used to remove an existing  user.\n\nThis call can only be executed from shell process of the root user.\n\nThe root and kernel user cannot be removed.\n\n[More](https://exposnitc.github.io/os_design-files/multiusersyscalls.html#remusr)"
+            },
+            {
+                "name" : "INT_SETPWD",
+                "insert_text" : "INT_SETPWD",
+                "detail" : "Setpwd System Call = 24",
+                "documentation" : "#### SetPWD System Call\n\nThis system call is used to change the password of an existing user. This system call can only be executed from the shell proess.\n\nA user can set only his or her password. Root user can set any user's password.\n\n[More](https://exposnitc.github.io/os_design-files/multiusersyscalls.html#setpwd)"
+            },
+            {
+                "name" : "INT_GETUNAME",
+                "insert_text" : "INT_GETUNAME",
+                "detail" : "Get Username Syscall = 25",
+                "documentation" : "#### GetUname System Call\n\n"
+            },
+            {
+                "name" : "INT_GETUID",
+                "insert_text" : "INT_GETUID",
+                "detail" : "Get UID System Call - 26",
+                "documentation" : "#### Get UID System Call\n\nIf the userid is valid it returns the isername corresponding to the userid.\n\nOtherwise it returns -1.\n\n[More](https://exposnitc.github.io/os_design-files/multiusersyscalls.html#getuname)"
+            },
+            {
+                "name" : "INT_LOGIN",
+                "insert_text" : "INT_LOGIN",
+                "detail" : "Login System Call - 27",
+                "documentation" : "#### Login System Call\n\nThis system call is used to login a new user. It can be executed only from the login process.\n\n[More](https://exposnitc.github.io/os_design-files/multiusersyscalls.html#login)"
+            },
+            {
+                "name" : "INT_LOGOUT",
+                "insert_text" : "INT_LOGOUT",
+                "detail" : "Logout System Call - 28",
+                "documentation" : "#### Logout System Call\n\nThis system call is used to logout the current user. It can be invoked only from the shell process (PID = 2).\n\n[More](https://exposnitc.github.io/os_design-files/multiusersyscalls.html#logout)"
+            },
+            {
+                "name" : "INT_TEST0",
+                "insert_text" : "INT_TEST0",
+                "detail" : "Test System Call 0 - 96",
+                "documentation" : "### Test System Call 0 `INT_TEST0`"
+            },
+            {
+                "name" : "INT_TEST1",
+                "insert_text" : "INT_TEST1",
+                "detail" : "Test Sysstem Call 1 - 97",
+                "documentation" : "### Test System Call 1 `INT_TEST1`"
+            },
+            {
+                "name" : "INT_TEST2",
+                "insert_text" : "INT_TEST2",
+                "detail" : "Test Sysstem Call 2 - 98",
+                "documentation" : "### Test System Call 2 `INT_TEST2`"
+            },
+            {
+                "name" : "INT_TEST3",
+                "insert_text" : "INT_TEST3",
+                "detail" : "Test Sysstem Call 3 - 99",
+                "documentation" : "### Test System Call 3 `INT_TEST3`"
+            }
+        ]
+    },
+    "Functions" : {
+        "type" : 1,
+        "items" : [
+            {
+                "name" : "ACQUIRE_BUFFER",
+                "insert_text" : "ACQUIRE_BUFFER",
+                "detail" : "Resource Manager Function #1",
+                "documentation" : "### ACQUIRE_BUFFER Function\n\nResource Manager Function #1"
+            },
+            {
+                "name" : "RELEASE_BUFFER",
+                "insert_text" : "RELEASE_BUFFER",
+                "detail" : "Resource Manager Function #2",
+                "documentation" : "### RELEASE_BUFFER Function\n\nResource Manager Function #2"
+            },
+            {
+                "name" : "ACQUIRE_DISK",
+                "insert_text" : "ACQUIRE_DISK",
+                "detail" : "Resource Manager Function #3",
+                "documentation" : "### ACQUIRE_DISK Function\n\nResource Manager Function #3"
+            },
+            {
+                "name" : "ACQUIRE_INODE",
+                "insert_text" : "ACQUIRE_INODE",
+                "detail" : "Resource Manager Function #4",
+                "documentation" : "### ACQUIRE_INODE Function\n\nResource Manager Function #4"
+            },
+            {
+                "name" : "RELEASE_INODE",
+                "insert_text" : "RELEASE_INODE",
+                "detail" : "Resource Manager Function #5",
+                "documentation" : "### RELEASE_INODE Function\n\nResource Manager Function #5"
+            },
+            {
+                "name" : "ACQUIRE_SEMAPHORE",
+                "insert_text" : "ACQUIRE_SEMAPHORE",
+                "detail" : "Resource Manager Function #6",
+                "documentation" : "### ACQUIRE_SEMAPHORE Function\n\nResource Manager Function #6"
+            },
+            {
+                "name" : "RELEASE_SEMAPHORE",
+                "insert_text" : "RELEASE_SEMAPHORE",
+                "detail" : "Resource Manager Function #7",
+                "documentation" : "### RELEASE_SEMAPHORE Function\n\nResource Manager Function #7"
+            },
+            {
+                "name" : "ACQUIRE_TERMINAL",
+                "insert_text" : "ACQUIRE_TERMINAL",
+                "detail" : "Resource Manager Function #8",
+                "documentation" : "### ACQUIRE_TERMINAL Function\n\nResource Manager Function #8"
+            },
+            {
+                "name" : "RELEASE_TERMINAL",
+                "insert_text" : "RELEASE_TERMINAL",
+                "detail" : "Resource Manager Function #9",
+                "documentation" : "### RELEASE_TERMINAL Function\n\nResource Manager Function #9"
+            },
+            {
+                "name" : "GET_PCB_ENTRY",
+                "insert_text" : "GET_PCB_ENTRY",
+                "detail" : "Process Manager Function #1",
+                "documentation" : "### GET_PCB_ENTRY Function\n\nResource Manager Function #1"
+            },
+            {
+                "name" : "FREE_USER_AREA_PAGE",
+                "insert_text" : "FREE_USER_AREA_PAGE",
+                "detail" : "Process Manager Function #2",
+                "documentation" : "### FREE_USER_AREA_PAGE Function\n\nResource Manager Function #2"
+            },
+            {
+                "name" : "EXIT_PROCESS",
+                "insert_text" : "EXIT_PROCESS",
+                "detail" : "Process Manager Function #4",
+                "documentation" : "### EXIT_PROCESS Function\n\nResource Manager Function #3"
+            },
+            {
+                "name" : "FREE_PAGE_TABLE",
+                "insert_text" : "FREE_PAGE_TABLE",
+                "detail" : "Process Manager Function #4",
+                "documentation" : "### FREE_PAGE_TABLE Function\n\nResource Manager Function #4"
+            },
+            {
+                "name" : "KILL_ALL",
+                "insert_text" : "KILL_ALL",
+                "detail" : "Process Manager Function #5",
+                "documentation" : "### KILL_ALL Function\n\nResource Manager Function #5"
+            },
+            {
+                "name" : "GET_FREE_PAGE",
+                "insert_text" : "GET_FREE_PAGE",
+                "detail" : "Memory Manager Function #1",
+                "documentation" : "### GET_FREE_PAGE Function\n\nMemory Manager Function #1"
+            },
+            {
+                "name" : "RELEAEE_PAGE",
+                "insert_text" : "RELEASE_PAGE",
+                "detail" : "Memory Manager Function #2",
+                "documentation" : "### RELEASE_PAGE Function\n\nMemory Manager Function #2"
+            },
+            {
+                "name" : "GET_FREE_BLOCK",
+                "insert_text" : "GET_FREE_BLOCK",
+                "detail" : "Memory Manager Function #3",
+                "documentation" : "### GET_FREE_BLOCK Function\n\nMemory Manager Function #3"
+            },
+            {
+                "name" : "RELEASE_BLOCK",
+                "insert_text" : "RELEASE_BLOCK",
+                "detail" : "Memory Manager Function #4",
+                "documentation" : "### RELEASE_BLOCK Function\n\nMemory Manager Function #4"
+            },
+            {
+                "name" : "GET_CODE_PAGE",
+                "insert_text" : "GET_CODE_PAGE",
+                "detail" : "Memory Manager Function #5",
+                "documentation" : "### GET_CODE_PAGE Function\n\nMemory Manager Function #5"
+            },
+            {
+                "name" : "GET_SWAP_BLOCK",
+                "insert_text" : "GET_SWAP_BLOCK",
+                "detail" : "Memory Manager Function #6",
+                "documentation" : "### GET_SWAP_BLOCK Function\n\nMemory Manager Function #6"
+            },
+            {
+                "name" : "BUFFERED_WRITE",
+                "insert_text" : "BUFFERED_WRITE",
+                "detail" : "File Manager Function #1",
+                "documentation" : "### BUFFERED_WRITE Function\n\nFile Manager Function #1"
+            },
+            {
+                "name" : "BUFFERED_READ",
+                "insert_text" : "BUFFERED_READ",
+                "detail" : "File Manager Function #2",
+                "documentation" : "### BUFFERED_READ Function\n\nFile Manager Function #2"
+            },
+            {
+                "name" : "OPEN",
+                "insert_text" : "OPEN",
+                "detail" : "File Manager Function #3",
+                "documentation" : "### OPEN Function\n\nFile Manager Function #3"
+            },
+            {
+                "name" : "CLOSE",
+                "insert_text" : "CLOSE",
+                "detail" : "File Manager Function #3",
+                "documentation" : "### CLOSE Function\n\nFile Manager Function #3"
+            },
+            {
+                "name" : "DISK_STORE",
+                "insert_text" : "DISK_STORE",
+                "detail" : "Device Manager Function #1",
+                "documentation" : "### DISK_STORE Function\n\nDevice Manager Function #1"
+            },
+            {
+                "name" : "DISK_LOAD",
+                "insert_text" : "DISK_LOAD",
+                "detail" : "Device Manager Function #2",
+                "documentation" : "### DISK_LOAD Function\n\nDevice Manager Function #2"
+            },
+            {
+                "name" : "TERMINAL_WRITE",
+                "insert_text" : "TERMINAL_WRITE",
+                "detail" : "Device Manager Function #3",
+                "documentation" : "### TERMINAL_WRITE Function\n\nDevice Manager Function #3"
+            },
+            {
+                "name" : "TERMINAL_READ",
+                "insert_text" : "TERMINAL_READ",
+                "detail" : "Device Manager Function #4",
+                "documentation" : "### TERMINAL_READ Function\n\nDevice Manager Function #4"
+            },
+            {
+                "name" : "SWAP_OUT",
+                "insert_text" : "SWAP_OUT",
+                "detail" : "Pager Module Function #1",
+                "documentation" : "### SWAP_OUT Function\n\nPager Module Function #1"
+            },
+            {
+                "name" : "SWAP_IN",
+                "insert_text" : "SWAP_IN",
+                "detail" : "Pager Module Function #2",
+                "documentation" : "### SWAP_IN Function\n\nPager Module Function #2"
+            }
+        ]
+    },
+    "Kernel_DS" : {
+        "type" : 21,
+        "items" : [
+            {
+                "name" : "PROCESS_TABLE",
+                "insert_text" : "PROCESS_TABLE",
+                "detail" : "PROCESS_TABLE = 28672",
+                "documentation" : "### Process Table (Process Control Block)\n\nProcess Table contains an entry for each process present in the system.\n\n[More](https://exposnitc.github.io/os_design-files/process_table.html)"
+            },
+            {
+                "name" : "OPEN_FILE_TABLE",
+                "insert_text" : "OPEN_FILE_TABLE",
+                "detail" : "OPEN_FILE_TABLE = 28928",
+                "documentation" : "### Open File Table\n\nOpen File Table stores the information about all the files that are open while the OS is running.\n\n[More](https://exposnitc.github.io/os_design-files/mem_ds.html#file_table)"
+            },
+            {
+                "name" : "SEMAPHORE_TABLE",
+                "insert_text" : "SEMAPHORE_TABLE",
+                "detail" : "SEMAPHORE_TABLE = 29056",
+                "documentation" : "### Semaphore Table\n\nThe Semaphore Table contains the details about the semaphores used by all the processes. It consists of `MAX_SEM_COUNT` (=32) entries.\n\n[More](https://exposnitc.github.io/os_design-files/mem_ds.html#sem_table)"
+            },
+            {
+                "name" : "MEMORY_FREE_LIST",
+                "insert_text" : "MEMORY_FREE_LIST",
+                "detail" : "MEMORT_FREE_LIST = 29184",
+                "documentation" : "### Memory Free List\n\nThe Memory free list is a data structure used for keeping track of used and unused pages in the memory. It consists of MAX_MEM_PAGE entries and each entry is of size one word. Thus, the total size of the free list is `MAX_MEM_PAGE` words.\n\n[More](https://exposnitc.github.io/os_design-files/mem_ds.html#mem_free_list)"
+            },
+            {
+                "name" : "FILE_STATUS_TABLE",
+                "insert_text" : "FILE_STATUS_TABLE",
+                "detail" : "FILE_STATUS_TABLE = 29312",
+                "documentation" : "### File Status Table\n\nThe File Status Table contains details about lock status and file open count of each file in the inode table. It consists of `MAX_FILE_NUM` (= 60 in the present eXpOS version) entries.\n\n[More](https://exposnitc.github.io/os_design-files/mem_ds.html#file_lock_status_table)"
+            },
+            {
+                "name" : "DISK_STATUS_TABLE",
+                "insert_text" : "DISK_STATUS_TABLE",
+                "detail" : "DISK_STATUS_TABLE = 29552",
+                "documentation" : "### Disk Status Table\n\nIt is assumed that the machine provides a load instruction to transfer a disk block to a memory page and a store instruction to transfer a memory page to a disk block. The Disk Status Table keeps track of these disk-memory transfers.\n\n[More](https://exposnitc.github.io/os_design-files/mem_ds.html#ds_table)"
+            },
+            {
+                "name" : "SYSTEM_STATUS_TABLE",
+                "insert_text" : "SYSTEM_STATUS_TABLE",
+                "detail" : "SYSTEM_STATUS_TABLE = 29560",
+                "documentation" : "### System Status Table\n\nIt keeps the information about the number of free pages in memory, the number of processes blocked because memory is unavailable, the number of processes in swapped state and, the pid of the process to be scheduled next. The size of the table is 8 words out of which 2 words are unused.\n\n[More](https://exposnitc.github.io/os_design-files/mem_ds.html#ss_table)"
+            },
+            {
+                "name" : "TERMINAL_STATUS_TABLE",
+                "insert_text" : "TERMINAL_STATUS_TABLE",
+                "detail" : "TERMINAL_STATUS_TABLE = 29568",
+                "documentation" : "### Terminal Status Table\n\nThe Terminal Status Table keeps track of the Read/Write operations done on the terminal. Every time a Read or Write system call is invoked on the terminal, the PID of the process that invoked the system call is stored in Terminal Status Table. The table also contains information on the status of the terminal (whether free or busy). The size of the table is 4 words of which the last 2 are unused.\n\n[More](https://exposnitc.github.io/os_design-files/mem_ds.html#ts_table)"
+            },
+            {
+                "name" : "PAGE_TABLE_BASE",
+                "insert_text" : "PAGE_TABLE_BASE",
+                "detail" : "PAGE_TABLE_BASE = 29696",
+                "documentation" : "### Page Table\n\nThe Per-Process Page Table contains information regarding the physical location of the pages of a process. Each valid entry of a page table stores the physical page number corresponding to each logical (virtual) page associated with the process.\n\n[More](https://exposnitc.github.io/os_design-files/process_table.html#per_page_table)"
+            },
+            {
+                "name" : "BUFFER_TABLE",
+                "insert_text" : "BUFFER_TABLE",
+                "detail" : "BUFFER_TABLE = 30016",
+                "documentation" : "### Buffer Table\n\nWhen a process reads/writes into a file, the relevant disk block is first brought into a memory buffer by the OS and the read/write operation is performed on the buffer. The OS reserves MAX_BUFFER number of memory pages as buffers.\n\n[More](https://exposnitc.github.io/os_design-files/mem_ds.html#buffer_table)"
+            },
+            {
+                "name" : "DISK_MAP_TABLE",
+                "insert_text" : "DISK_MAP_TABLE",
+                "detail" : "DISK_MAP_TABLE = 30032",
+                "documentation" : "### Disk Map Table\n\nThe per-process Disk Map Table stores the disk block number corresponding to the pages of each process. The Disk Map Table has 10 entries for a single process. When the memory pages of a process are swapped out into the disk, the corresponding disk block numbers of those pages are stored in this table. It also stores block numbers of the code pages of the process.\n\n[More](http://exposnitc.github.io/os_design-files/process_table.html#disk_map_table)"
+            },
+            {
+                "name" : "INODE_TABLE",
+                "insert_text" : "INODE_TABLE",
+                "detail" : "INODE_TABLE = 30208",
+                "documentation" : "### Inode Table\n\nThe Inode table is stored in the disk and has an entry for each file present in the disk (A copy of the Inode table is maintained in the memory when the OS is running). It consists of MAX_FILE_NUM entries. Thus eXpFS permits a maximum of MAX_FILE_NUM files. This version of eXpOS sets MAX_FILE_NUM = 60.\n\n[More](https://exposnitc.github.io/os_design-files/disk_ds.html#inode_table)"
+            },
+            {
+                "name" : "USER_TABLE",
+                "insert_text" : "USER_TABLE",
+                "detail" : "USER_TABLE = 31168",
+                "documentation" : "### User Table\n\nThe User table is stored in the disk and has an entry for each user. (A copy of the User table is maintained in the memory when the OS is running). It consists of MAX_USER_NUM entries. This version of eXpOS sets MAX_USER_NUM = 16 including entries for the kernel and the root.\n\n[More](http://exposnitc.github.io/os_design-files/disk_ds.html#user_table)"
+            },
+            {
+                "name" : "DISK_FREE_LIST",
+                "insert_text" : "DISK_FREE_LIST",
+                "detail" : "DISK_FREE_LIST = 31232",
+                "documentation" : "### Disk Free List\n\nThe Disk Free List consists of `DISK_SIZE` entries. (The value of `DISK_SIZE` is fixed to 512 in the present version). Each entry is of size one word and thus, the size of the disk free list is `DISK_SIZE` = 512 words. For each block in the disk there is an entry in the Disk Free List which contains either `0` (free) or `1` (used).\n\n[More](https://exposnitc.github.io/os_design-files/disk_ds.html#disk_free_list)"
+            },
+            {
+                "name" : "ROOT_FILE",
+                "insert_text" : "ROOT_FILE",
+                "detail" : "ROOT_FILE = 31744",
+                "documentation" : "### Root File\n\nThe Root File is stored in the disk and has an entry for each file present in the disk (A copy of the Root File is maintained in the memory when the OS is running). It consists of MAX_FILE_NUM entries. Thus eXpFS permits a maximum of MAX_FILE_NUM files. This version of eXpOS sets MAX_FILE_NUM = 60.\n\n[More](https://exposnitc.github.io/os_design-files/disk_ds.html#root_file)"
+            },
+            {
+                "name" : "BUFFER",
+                "insert_text" : "BUFFER",
+                "detail": "BUFFER = 36352",
+                "documentation" : "### Buffer\n\nStarting Address of Buffer Cache (Pages 71 - 74)"
+            },
+            {
+                "name" : "BUFFER_BASE",
+                "insert_text" : "BUFFER_BASE",
+                "detail" : "BUFFER_BASE = 71",
+                "documentation" : "### Buffer Base\n\nThis is the starting **Page Number** of Buffer Cache"
+            }
+        ]
+    },
+    "Process_States" : {
+        "type" : 19,
+        "items" : [
+            {
+                "name" : "READY",
+                "insert_text" : "READY",
+                "detail" : "READY = 1",
+                "documentation" : "## Process State `READY`\n\nState which declares the process ready for execution."
+            },
+            {
+                "name" : "RUNNING",
+                "insert_text" : "RUNNING",
+                "detail" : "RUNNING = 2",
+                "documentation" : "## Process State `RUNNING`\n\nState which declares that process is under execution."
+            },
+            {
+                "name" : "CREATED",
+                "insert_text" : "CREATED",
+                "detail" : "CREATED = 3",
+                "documentation" : "## Process State `CREATED`\n\nThis state is assigned from `ALLOCATED` once [Fork](https://exposnitc.github.io/os_design-files/fork.html) system call completes creation of the process."
+            },
+            {
+                "name" : "TERMINATED",
+                "insert_text" : "TERMINATED",
+                "detail" : "TERMINATED = 3",
+                "documentation" : "## Process State `TERMINATED`\n\nThis state is declared when the process has either completed execution or has invoked an [Exit](https://exposnitc.github.io/os_design-files/exit.html) System Call"
+            },
+            {
+                "name" : "WAIT_DISK",
+                "insert_text" : "WAIT_DISK",
+                "detail" : "WAIT_DISK = 5",
+                "documentation" :"## Process State `WAIT_DISK`\n\nThis state is declared when the process is waiting to acquire disk."
+            },
+            {
+                "name" : "WAIT_FILE",
+                "insert_text" : "WAIT_FILE",
+                "detail" : "WAIT_FILE = 6",
+                "documentation" : "## Process State `WAIT_FILE`\n\nThis state is declared on a process waiting for release on an Inode."
+            },
+            {
+                "name" : "WAIT_BUFFER",
+                "insert_text" : "WAIT_BUFFER",
+                "detail" : "WAIT_BUFFER = 7",
+                "documentation" : "## Process State `WAIT_BUFFER`\n\nThis state is declared when the process is waiting for release of buffer cache."
+            },
+            {
+                "name" : "WAIT_TERMINAL",
+                "insert_text" : "WAIT_TERMINAL",
+                "detail" : "WAIT_TERMINAL = 8",
+                "documentation" : "## Process State `WAIT_TERMINAL`\n\nThis state is declared when the process is waiting to acquire terminal."
+            },
+            {
+                "name" :"WAIT_PROCESS",
+                "insert_text" : "WAIT_PROCESS",
+                "detail" : "WAIT_PROCESS = 9",
+                "documentation" : "## Process State `WAIT_PROCESS`\n\nThis state is declared when the process is waiting for a signal from another process."
+            },
+            {
+                "name" : "WAIT_SEMAPHORE",
+                "insert_text" : "WAIT_SEMAPHORE",
+                "detail" : "WAIT_SEMAPHORE = 10",
+                "documentation" : "## Process State `WAIT_SEMAPHORE`\n\nThis state is declared when the process is waiting to acquire a semaphore."
+            },
+            {
+                "name" : "WAIT_MEM",
+                "insert_text" : "WAIT_MEM",
+                "detail" : "WAIT_MEM = 11",
+                "documentation" :"## Process State `WAIT_MEM`\n\nThis state is declared when the proces is waiting as memory is not available."
+            },
+            {
+                "name" : "ALLOCATED",
+                "insert_text" : "ALLOCATED",
+                "detail" : "ALLOCATED = 12",
+                "documentation" : "## Process State `ALLOCATED`\n\nThis state is when the process table entry has been allocated for the process but the process creation is not complete."
+            }
+        ]
+    },
+    "FileTypes" : {
+        "type" : 19,
+        "items" : [
+            {
+                "name" : "EXCLUSIVE",
+                "insert_text" : "EXCLUSIVE",
+                "detail" : "EXCLUSIVE = 0",
+                "documentation" : "## File Permission `EXCLUSIVE`\n\nExclusive Permission for the File"
+            },
+            {
+                "name" : "OPEN_ACCESS",
+                "insert_text" : "OPEN_ACCESS",
+                "detail" : "OPEN_ACCESS = 1",
+                "documentation" : "## File Permission `OPEN_ACCESS`\n\nOpen-Access Permission for the File" 
+            },
+            {
+                "name" : "ROOT",
+                "insert_text" : "ROOT",
+                "detail" : "ROOT = 1",
+                "documentation" : "## File Type `ROOT`\n\nIndicates that the file is the root file."
+            },
+            {
+                "name" : "DATA",
+                "insert_text" : "DATA",
+                "detail" : "DATA = 2",
+                "documentation" : "## File Type `DATA`\n\nIndicates that the file is a data file."
+            },
+            {
+                "name" : "EXEC",
+                "insert_text" : "EXEC",
+                "detail" : "EXEC = 3",
+                "documentation" : "## File Type `EXEC`\n\nIndicates that the file is an executable file."
+            }
+        ]
+    },
+    "User_Program" : {
+        "type" : 7,
+        "items" : [
+            {
+                "name" : "LIBRARY",
+                "insert_text" : "LIBRARY",
+                "detail" : "LIBRARY = 32256",
+                "documentation"  : "## eXpOS Library\n\nStarting address of the eXpOS Library."
+            },
+            {
+                "name" : "INIT",
+                "insert_text" : "INIT",
+                "detail" : "INIT = 33280",
+                "documentation" : "## Init Program\n\nStarting address of the INIT Program."
+            },
+            {
+                "name" : "LOGIN",
+                "insert_text" : "LOGIN",
+                "detail" : "LOGIN = 33280",
+                "documentation" : "## Login Program\n\nStarting address of the Login Program."
+            },
+            {
+                "name" : "SHELL",
+                "insert_text" : "SHELL",
+                "detail" : "SHELL = 34304",
+                "documentation" : "## Shell Program\n\nStarting address of the Shell Program."
+            },
+            {
+                "name" : "IDLE",
+                "insert_text" : "IDLE",
+                "detail" : "IDLE = 35328",
+                "documentation" : "## Idle/Swapper Program\n\nStarting address of Idle Program."
+            },
+            {
+                "name" : "SWAPPER",
+                "insert_text" : "SWAPPER",
+                "detail" : "SWAPPER = 35328",
+                "documentation" : "## Idle/Swapper Program\n\nStarting address of the Swapper Program."
+            },
+            {
+                "name" : "IDLE_PROCESS",
+                "insert_text" : "IDLE_PROCESS",
+                "detail" : "IDLE_PROCESS",
+                "documentation" : "## Idle Process\n\nThe PID (Process ID) of the Idle Process."
+            },
+            {
+                "name" : "INIT_PROCESS",
+                "insert_text" : "INIT_PROCESS",
+                "detail" : "INIT_PROCESS = 1",
+                "documentation" : "## Init/Login Process\n\nThe PID for the INIT Process."
+            },
+            {
+                "name" : "LOGIN_PROCESS",
+                "insert_text" : "LOGIN_PROCESS",
+                "detail" : "LOGIN_PROCESS = 1",
+                "documentation" : "## Init/Login Process\n\nThe PID of the Login Process"
+            },
+            {
+                "name" : "SHELL_PROCESS",
+                "insert_text" : "SHELL_PROCESS",
+                "detail" : "SHELL_PROCESS = 2",
+                "documentation" : "## Shell Process\n\nThe PID of the Shell."
+            },
+            {
+                "name" : "SWAPPER_DAEMON",
+                "insert_text" : "SWAPPER_DAEMON",
+                "detail" : "SWAPPER_DAEMON = 15",
+                "documentation" : "## Swapper Daemon\n\nThe PID of the Swapper Daemon."
+            }
+        ]
+    },
+    "Swap_Constants" : {
+        "type" : 20,
+        "items" : [
+            {
+                "name" : "MEM_LOW",
+                "insert_text" :"MEM_LOW",
+                "detail" : "MEM_LOW = 4",
+                "documentation" : "## Swapper `MEM_LOW`\n\nMemory is critically so low that swap has to be initiated."
+            },
+            {
+                "name" : "MEM_HIGH",
+                "insert_text" : "MEM_HIGH",
+                "detail" : "MEM_HIGH = 12",
+                "documentation" : "## Swapper `MEM_HIGH`\n\nMemory is high enough that a process can be swapped in."
+            },
+            {
+                "name" : "MAX_TICK",
+                "insert_text" : "MAX_TICK",
+                "detail" : "MAX_TICK = 1000",
+                "documentation" : "## Swapper `MAX_TICK`\n\nIndicates the threshold after which a swapped out process must be swapped back in."
+            }
+        ]
+    },
+    "Resource_Table_Consts" : {
+        "type" : 20,
+        "items" :  [
+            {
+                "name" : "FILE",
+                "insert_text" : "FILE",
+                "detail" : "FILE = 0",
+                "documentation" : "## Resource Type `FILE`\n\nIndicates that the resoure type is a file in the [resource table](https://exposnitc.github.io/os_design-files/process_table.html#per_process_table)."
+            },
+            {
+                "name" : "SEMAPHORE",
+                "insert_text" : "SEMAPHORE",
+                "detail" : "SEMAPHORE = 1",
+                "documentation" : "## Resource Type `SEMAPHORE`\n\nIndicates that the resoure is a semaphore in the [resource table](https://exposnitc.github.io/os_design-files/process_table.html#per_process_table)."
+            },
+            {
+                "name" : "RESOURCE_TABLE_OFFSET",
+                "insert_text" : "RESOURCE_TABLE_OFFSET",
+                "detail" : "RESOURCE_TABLE_OFFSET = 496",
+                "documentation" : "## Resource Constant `RESOURCE_TABLE_OFFSET`\n\nOffset of the Resoure Table from the start of user area page."
+            }
+        ]
+    },
+    "eXpFS_Disk_Consts" : {
+        "type" : 20,
+        "items" : [
+            {
+                "name" : "XFS_BSIZE",
+                "insert_text" : "XFS_BSIZE",
+                "detail" : "XFS_BSIZE = 512",
+                "documentation" : "## Number of words in a disk block."
+            },
+            {
+                "name" : "MAX_FILE_BLOCKS",
+                "insert_text" : "MAX_FILE_BLOCKS",
+                "detail" : "MAX_FILE_BLOCKS = 4",
+                "documentation" : "## eXpFS Constant `MAX_FILE_BLOCKS`\n\nMaximum number of blocks allocatable to each file."
+            },
+            {
+                "name" : "DISK_SWAP_AREA",
+                "insert_text" : "DISK_SWAP_AREA",
+                "detail"  :"DISK_SWAP_AREA = 256",
+                "documentation" : "## eXpFS Constant `DISK_SWAP_AREA`\n\nStoring block number of Swap Area in the Disk."
+            },
+            {
+                "name" : "DISK_FREE_AREA",
+                "insert_text" :  "DISK_FREE_AREA",
+                "detail" : "DISK_FREE_AREA = 69",
+                "documentation" : "## eXpFS Constant `DISK_FREE_AREA`\n\nStarting number of User Block Area in the disk."
+            },
+            {
+                "name" : "DISK_SIZE",
+                "insert_text" : "DISK_SIZE",
+                "detail" : "DISK_SIZE",
+                "documentation" : "## eXpFS Constant `DISK_SIZE`\n\nNumber of blocks in the disk."
+            }
+        ]
+    },
+    "Limit_Consts" : {
+        "type" : 20,
+        "items" : [
+            {
+                "name" : "PAGE_SIZE",
+                "insert_text" : "PAGE_SIZE",
+                "detail" : "PAGE_SIZE = 512",
+                "documentation" : "## `PAGE SIZE` Limit\n\nSize of a memory page in eXpOS."
+            },
+            {
+                "name" : "NUM_MEM_PAGES",
+                "insert_text" : "NUM_MEM_PAGES",
+                "detail" : "NUM_MEM_PAGES = 128",
+                "documentation" : "## `NUM_MEM_PAGES` Limit\n\nNumber of memory pages in eXpOS."
+            },
+            {
+                "name" : "MAX_PROC_NUM",
+                "insert_text" : "MAX_PROC_NUM",
+                "detail" : "MAX_PROC_NUM = 16",
+                "documentation"  :"## `MAX_PROC_NUM` Limit\n\nThe Max. number of processes allowed by eXpOS."
+            },
+            {
+                "name" : "PT_ENTRY_SIZE",
+                "insert_text" : "PT_ENTRY_SIZE",
+                "detail" : "PT_ENTRT_SIZE = 16",
+                "documentation" : "## `PT_ENTRY_SIZE Limit\n\nSise of one page table entry"
+            },
+            {
+                "name" : "MAX_OPENFILE_NUM",
+                "insert_text" : "MAX_OPENFILE_NUM",
+                "detail" : "MAX_OPENFILE_NUM = 32",
+                "documentation" : "## MAX_OPENFILE_NUM"
+            },
+            {
+                "name" : "MAX_MEM_PAGE",
+                "insert_text" : "MAX_MEM_PAGE",
+                "detail" : "MAX_MEM_PAGE 128",
+                "documentation" : "## `MAX_MEM_PAGE` Limit\n\n3"
+            },
+            {
+                "name" :"MAX_SEM_COUNT",
+                "insert_text": "MAX_SEM_COUNT",
+                "detail" : "MAX_SEM_COUNT = 32",
+                "documentation" :  "## `MAX_SEM_COUNT`\n\nMaximum number of semaphorea allowed bt eXpOS."
+            },
+            {
+                "name" : "MAX_PROC_PAGES",
+                "insert_text" : "MAX_PROC_PAGES",
+                "detail" : "MAX_PROC_PAGES = 10",
+                "documentation" :  "## `MAX_PROC_PAGES` Limit\n\nMaximum number of pages allowe for each process."
+            },
+            {
+                "name" : "MAX_BUFFER",
+                "insert_text" : "MAX_Buffer",
+                "detail" : "MAX_BUFFER = 4",
+                "documentation" : "## `MAX_BUFFER` Limit\n\nMaximum number of read/write buffers in eXpOS."
+            },
+            {
+                "name" : "MAX_FILE_NUM",
+                "insert_text" : "MAX_FILE_NUM",
+                "detail" : "MAX_FILE_NUM = 60",
+                "documentation" : "## `MAX_FILE_NUN` Limit\n\nThe maximum number of files possible."
+            },
+            {
+                "name" : "MAX_FILE_SIZE",
+                "insert_text" : "MAX_FILE_SIZE",
+                "detail" : "MAX_FILE_SIZE = 2048",
+                "documentation" : "## `MAX_FILE_FIZE` Limit\n\nMaximum words in a file"
+            },
+            {
+                "name" :"MAX_USER_NUM",
+                "insert_text": "MAX_USER_NUM",
+                "detail" : "MAX_USER_NUM = 16",
+                "documentation" : "## `MAX_USER_NUM` Limit\n\nMaximum number of users allowed.\n\n"
+            }
+        ]
+    },
+    "MISC_Constants" : {
+        "type" : 20,
+        "items" : [
+            {
+                "name" : "INODE_ROOT",
+                "insert_text" : "INODE_ROOT",
+                "detail" : "INODE_ROOT = 0",
+                "documentation" : "## `INODE_ROOT` Constant\n\nInode index field of the Open File Table is set to `INODE_ROOT` if the file is the Root File"
+            },
+            {
+                "name" : "KERNEL",
+                "insert_text" : "KERNEL",
+                "detail" : "KERNEL = 0",
+                "documentation" : "## `KERNEL` Constant\n\nIndicates the Kernel user in the `CURRENT_USER_ID` field of the System Status Table."
+            },
+            {
+                "name" :"ZERO",
+                "insert_text" : "ZERO",
+                "detail" : "ZERO = 0",
+                "documentation" : "## `ZERO` (=0) Constant\n\nIndicates a Boolean False Value."
+            },
+            {
+                "name" : "ONE",
+                "insert_text" : "ONE",
+                "detail" : "ONE = 1",
+                "documentation" : "## `ONE` (=1) Constant\n\nIndicates a Boolean True Value."
+            }
+        ]
+    },
+    "NEXSM_Consts" : {
+        "type" : 26,
+        "items" : [
+            {
+                "name" : "OS_SECONDARY",
+                "insert_text" : "OS_SECONDARY",
+                "details" : "OS_SECONDARY = 65536",
+                "documentation" : "## `OS_SECONDARY` Constant\n\nStarting address of OS Startup code for Secondary Code"
+            },
+            {
+                "name" :"INT_19",
+                "insert_text" : "INT_19",
+                "details" : "INT_19 = 66560 (NEXSM)",
+                "documentation" : "### 0"
+            }
+        ]
+    },
+    "SpecialCompletions" : {
+        "type" : 3,
+        "items" : [
+            {
+                "name" : "if",
+                "insert_text" : "if (condn) then\n\t// statement;\nendif;",
+                "details":  "if Statement",
+                "documentation" : "### <Statement about if>",
+                "ranges" : [
+
+                ]
+            },
+            {
+                "name" : "if_else",
+                "insert_text" : "if (condn) then\n\t// on true condition;\nelse\n\t// on false condition;\nendif;",
+                "details" : "if-else Statement",
+                "documentation" : "### Statement about if-else",
+                "ranges" : [
+                    
+                ]
+            },
+            {
+                "name" : "while",
+                "insert_text" : "while (1) do\n\t// do something;\nendwhile;",
+                "details" : "while statement",
+                "documentation" : "### While Statement",
+                "ranges"  : [
+
+                ]
+            }
+        ]
+    }
+}

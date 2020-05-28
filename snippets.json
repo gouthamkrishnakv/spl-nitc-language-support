@@ -1,0 +1,29 @@
+{
+    "If statement" : {
+        "prefix" : "if",
+        "body" : [
+            "if ($1) then",
+            "\t$2",
+            "endif;"
+        ],
+        "description" : "If Statement"
+    },
+    "If-Else statement" : {
+        "prefix" : "ifelse",
+        "body" : [
+            "if ($1) then",
+            "\t$2",
+            "else",
+            "\t$3",
+            "endif;"
+        ]
+    },
+    "While Statement" : {
+        "prefix" : "while",
+        "body" : [
+            "while ($1) do",
+            "\t$2",
+            "endwhile;"
+        ]
+    }
+}

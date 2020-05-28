@@ -1,0 +1,175 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "Systems Programming Language (NITC)",
+    "patterns": [
+        { "include": "#registers" },
+        { "include": "#keywords" },
+        { "include": "#compiler_registers" },
+        { "include": "#invalid_registers" },
+        { "include": "#numbers" },
+        { "include": "#line_comment" }
+    ],
+    "repository": {
+        "registers" : {
+            "patterns": [
+                { "include": "#valid_registers" },
+                { "include": "#warn_registers"},
+                { "include": "#invalid_registers" },
+                { "include": "#strings" },
+                { "include": "#spl-constants" }
+            ]
+        },
+        "keywords" : {
+            "patterns": [ 
+                {
+                    "name" : "keyword.other.spl-nitc",
+                    "match" : "\\b(alias|define)\\b"
+                },
+                {
+                    "name" : "keyword.other.spl-nitc",
+                    "match": "\\b(breakpoint)\\b"
+                },
+                {
+                    "name" : "keyword.control.jump.spl-nitc",
+                    "match": "\\b(goto|call|return|ireturn|break|continue|halt)\\b"
+                },
+                {
+                    "name" : "keyword.control.conditionals.spl-nitc",
+                    "match": "\\b(if|then|else|endif\\;?)\\b"
+                },
+                {
+                    "name" : "keyword.control.repetitive.spl-nitc",
+                    "match": "\\b(while|do|endwhile\\;?)\\b"
+                },
+                {
+                    "name" : "support.function.spl-nitc",
+                    "match": "\\b(load|loadi|store)\\b"
+                },
+                {
+                    "name" : "support.function.stackoperations.spl-nitc",
+                    "match": "\\b(multipush|multipop)\\b"
+                },
+                {
+                    "name" : "keyword.control.stackoperations.spl-nitc",
+                    "match": "\\b(backup|restore)\\b"
+                },
+                {
+                    "name" : "keyword.control.io.spl-nitc",
+                    "match": "\\b(print|read|readi)\\b"
+                },
+                {
+                    "name" : "keyword.other.encrypt.spl-nitc",
+                    "match": "\\b(encrypt)\\b"
+                },
+                {
+                    "name" : "keyword.control.inline.spl-nitc",
+                    "match": "\\b(inline)\\b"
+                },
+                {
+                    "name" : "keyword.control.less.nexsm.spl-nitc",
+                    "match": "\\b(tsl|start|reset)\\b"
+                }
+            ]
+        },
+        "valid_registers" : {
+            "name" : "variable.other.register.spl-nitc",
+            "match": "\\b(R[1]?[0-5]{1}|R[\\d]{1}|BP|SP|IP|PTBR|PTLR|EIP|EC|EPN|EMA|P[0-3]{1})\\b"
+        },
+        "warn_registers" : {
+            "name" : "invalid.illegal",
+            "match": "\\b(P[4-9]{1}|P\\d{2,}|R[\\d]{2,})\\b"
+        },
+        "invalid_registers" : {
+            "name" : "invalid.deprecated",
+            "match": "\\b(R[1]{1}[6-9]{1})\\b"
+        },
+        "expression": {
+            "patterns": [{"include": "#numbers"}, { "include": "#keywords" }, { "include": "#paren-expression" }, { "include": "#registers" }, { "include": "#operators"}]
+        },
+        "operators" : {
+			"name" : "keyword.operator",
+			"match": "(\\+|\\-|\\*|\\/|(==)|=|\\(|\\)|\\<|\\>)"
+		},
+		"mem-operator" : {
+			"name" : "keyword.operator.new",
+			"match": "(\\[|\\])"
+		},
+        "numbers" : {
+            "name" : "constant.numeric.spl-nitc",
+			"match": "\\b[\\-]{0,1}\\d{1,9}\\b"
+		},
+        "line_comment": {
+            "name": "comment.line",
+			"match" : "\\/\\/.*[\\n\\r]{0,1}"
+		},
+        "strings": {
+            "name": "string.quoted.double.spl-nitc",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.spl-nitc",
+                    "match": "\\\\."
+                }
+            ]
+        },
+        "spl-constants" : {
+			"name" : "constant.language.spl-nitc",
+			"patterns": [
+				{
+					"name" : "constant.language",
+					"match": "\\b(EX_HANDLER|EXCEPTION|TIMER|DISK|CONSOLE|INT_4|INT_5|INT_6|INT_7|INT_8|INT_9|INT_10|INT_11|INT_12|INT_13|INT_14|INT_15|INT_16|INT_17|INT_18|MOD_0|RESOURCE_MANAGER|MOD_1|PROCESS_MANAGER|MOD_2|MEMORY_MANAGER|MOD_3|FILE_MANAGER|MOD_4|DEVICE_MANAGER|MOD_5|CONTEXT_SWITCH|SCHEDULER|MOD_6|PAGER_MODULE|MOD_7|BOOT_MODULE)\\b"
+				},
+				{
+					"name" : "constant.language.syscalls.spl-nitc",
+					"match": "\\b(INT_CREATE|INT_OPEN|INT_CLOSE|INT_DELETE|INT_WRITE|INT_SEEK|INT_READ|INT_FORK|INT_EXEC|INT_EXIT|INT_GETPID|INT_GETPPID|INT_WAIT|INT_SIGNAL|INT_SEMGET|INT_SEMRELEASE|INT_SEMLOCK|INT_SEMUNLOCK|INT_SHUTDOWN|INT_NEWUSR|INT_REMUSR|INT_SETPWD|INT_GETUNAME|INT_GETUID|INT_LOGIN|INT_LOGOUT|INT_TEST0|INT_TEST1|INT_TEST2|INT_TEST3)\\b"
+				},
+				{
+					"name" : "constant.language.functions.spl-nitc",
+					"match": "\\b(ACQUIRE_BUFFER|RELEASE_BUFFER|ACQUIRE_DISK|RELEASE_SEMAPHORE|ACQUIRE_TERMINAL|RELEASE_TERMINAL|GET_PCB_ENTRY|FREE_USER_AREA_PAGE|EXIT_PROCESS|FREE_PAGE_TABLE|KILL_ALL|GET_FREE_PAGE|RELEASE_PAGE|GET_FREE_BLOCK|RELEASE_BLOCK|GET_CODE_PAGE|GET_SWAP_BLOCK|BUFFERED_WRITE|BUFFERED_READ|OPEN|CLOSE|DISK_STORE|DISK_LOAD|TERMINAL_WRITE|TERMINAL_READ|SWAP_OUT|SWAP_IN)\\b"
+				},
+				{
+					"name" : "constant.language.kernelds.spl-nitc",
+					"match": "\\b(PROCESS_TABLE|OPEN_FILE_TABLE|SEMAPHORE_TABLE|MEMORY_FREE_LIST|FILE_STATUS_TABLE|DISK_STATUS_TABLE|SYSTEM_STATUS_TABLE|TERMINAL_STATUS_TABLE|PAGE_TABLE_BASE|BUFFER_TABLE|DISK_MAP_TABLE|INODE_TABLE|USER_TABLE|DISK_FREE_LIST|ROOT_FILE|BUFFER|BUFFER_BASE)\\b"
+				},
+				{
+					"name" : "constant.language.userprogs.spl-nitc",
+					"match" : "\\b(LIBRARY|INIT|LOGIN|SHELL|IDLE|SWAPPER|IDLE_PROCESS|INIT_PROCESS|LOGIN_PROCESS|SHELL_PROCESS|SWAPPER_DAEMON)\\b"
+				},
+				{
+					"name" : "constant.language.process-states.spl-nitc",
+					"match": "\\b(READY|RUNNING|CREATED|TERMINATED|WAIT_DISK|WAIT_FILE|WAIT_BUFFER|WAIT_TERMINAL|WAIT_PROCESS|WAIT_SEMAPHORE|WAIT_MEM|ALLOCATED)\\b"
+				},
+				{
+					"name" : "constant.language.file-perms.spl-nitc",
+					"match": "\\b(EXCLUSIVE|OPEN_ACCESS|ROOT|DATA|EXEC)\\b"
+				},
+				{
+					"name" : "constant.language.perprocessresource.spl-nitc",
+					"match": "\\b(FILE|SEMAPHORE|RESOURCE_TABLE_OFFSET)\\b"
+				},
+				{
+					"name" : "constant.language.swapping.spl-nitc",
+					"match": "\\b(MEM_LOW|MEM_HIGH|MAX_TICK)\\b"
+				},
+				{
+					"name" : "constant.language.xfs-disk.spl-nitc",
+					"match": "\\b(XFS_BSIZE|MAX_FILE_BLOCKS|DISK_SWAP_AREA|DISK_FREE_AREA|DISK_SIZE)\\b"
+				},
+				{
+					"name" : "constant.language.maxsizes.spl-nitc",
+					"match": "\\b(PAGE_SIZE|NUM_MEM_PAGES|MAX_PROC_NUM|PT_ENTRY_SIZE|MAX_OPENFILE_NUM|MAX_MEM_PAGE|MAX_SEM_COUNT|MAX_PROC_PAGES|MAX_BUFFER|MAX_FILE_NUM|MAX_FILE_SIZE|MAX_USER_NUM)\\b"
+				},
+				{
+					"name" : "constant.language.misc.spl-nitc",
+					"match": "\\b(INODE_ROOT|KERNEL|ZERO|ONE)\\b"
+				},
+				{
+					"name" : "constant.language.nexsm.spl-nitc",
+					"match": "\\b(OS_SECONDARY|INT_19|MOD_8|ACCESS_CONTROL|MOD_9|TESTA|MOD_10|TESTB|MOD_11|TESTC|IDLE2_PROCESS|INT_TEST4|INT_TEST5|INT_TEST6|INT_TEST7|ACQUIRE_KERN_LOCK|ACQUIRE_SCHED_LOCK|ACQUIRE_GLOCK|RELEASE_LOCK|PRIMARY_CORE|SECONDARY_CORE|ACCESS_LOCK_TABLE|KERN_LOCK|SCHED_LOCK|GLOCK|NUM_MEM_PAGES|DISK_SIZE)\\b"
+				}
+			]
+        }
+    },
+    "scopeName": "source.spl"
+}
