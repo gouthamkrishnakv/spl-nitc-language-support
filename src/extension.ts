@@ -2,10 +2,17 @@
  *   Copyright (c) 2020 
  *   All rights reserved.
  */
+
+
 // Import VSCode library for the purpose of extension.
-// @ts-nocheck
 import * as vscode from 'vscode';
-import completion_items from "./language_items.json";
+// Import completion items (proxy) from JSON
+import _completion_items from "./language_items.json";
+
+// Type the elements and cast onto final element.
+const completion_items: {
+  [key: string]: CompletionItem
+} = _completion_items;
 
 
 class SPLCompletionItem extends vscode.CompletionItem {
@@ -39,7 +46,7 @@ class CompletionEntry {
 
 class CompletionItem {
   type: number;
-  items: CompletionEntry[];
+  items: Array<CompletionEntry>;
 
   constructor(type: number, items: CompletionEntry[]) {
     this.type = type;
@@ -51,20 +58,20 @@ let initial_completion_suggestions: SPLCompletionItem[] = [];
 
 // This function is run on the launch of the program.
 export function activate(context: vscode.ExtensionContext) {
-  const comp_items: Object = completion_items;
-  // Add all keyword suggestions. This is needed to be done only once.
-  Object.keys(completion_items).forEach((kind: string) => {
-    const completionItem: CompletionItem = completion_items[kind];
-    completionItem.items.forEach((completionEntry: CompletionEntry) => {
+  // Parse through keys of the object.
+  Object.keys(completion_items).map((kind) => {
+    // For each Completion Entry
+    completion_items[kind].items.forEach((completion_entry: CompletionEntry) => {
+      // Initialize Completion Suggestions
       initial_completion_suggestions.push(
         new SPLCompletionItem(
-          completionEntry.name,
-          completionEntry.insert_text,
-          completionEntry.detail,
-          completionItem.type,
-          completionEntry.documentation
+          completion_entry.name,
+          completion_entry.insert_text,
+          completion_entry.detail,
+          completion_items[kind].type,
+          completion_entry.documentation
         )
-      )
+      );
     });
   });
 
@@ -78,7 +85,7 @@ export function activate(context: vscode.ExtensionContext) {
   );
 
   // Provide alias symbol completions, if we need it.
-  const alias_regex = /alias\s*([a-zA-Z\_]+[a-zA-Z0-9\_]*)\s*(R[01]?[\d]{1}|R[d]{1}|SP|BP|IP|(?:P[0-3]))/gm;
+  const alias_regex = /alias\s*([a-zA-Z\_]+[a-zA-Z0-9\_]*)\s*(R[01]?[\d]{1}|R[dcomp_items]{1}|SP|BP|IP|(?:P[0-3]))/gm;
 
   let alias_objects: vscode.DocumentSymbol[] = [];
 

@@ -913,7 +913,7 @@
                 "name" : "SEMAPHORE_TABLE",
                 "insert_text" : "SEMAPHORE_TABLE",
                 "detail" : "SEMAPHORE_TABLE = 29056",
-                "documentation" : "### Semaphore Table\n\nThe Semaphore Table contains the details about the semaphores used by all the processes. It consists of `MAX_SEM_COUNT` (=32) entries.\n\n[More](https://exposnitc.github.io/os_design-files/mem_ds.html#sem_table)"
+                "documentation" : "### Semaphore Table\n\nThe Semaphore Table contains the detail about the semaphores used by all the processes. It consists of `MAX_SEM_COUNT` (=32) entries.\n\n[More](https://exposnitc.github.io/os_design-files/mem_ds.html#sem_table)"
             },
             {
                 "name" : "MEMORY_FREE_LIST",
@@ -925,7 +925,7 @@
                 "name" : "FILE_STATUS_TABLE",
                 "insert_text" : "FILE_STATUS_TABLE",
                 "detail" : "FILE_STATUS_TABLE = 29312",
-                "documentation" : "### File Status Table\n\nThe File Status Table contains details about lock status and file open count of each file in the inode table. It consists of `MAX_FILE_NUM` (= 60 in the present eXpOS version) entries.\n\n[More](https://exposnitc.github.io/os_design-files/mem_ds.html#file_lock_status_table)"
+                "documentation" : "### File Status Table\n\nThe File Status Table contains detail about lock status and file open count of each file in the inode table. It consists of `MAX_FILE_NUM` (= 60 in the present eXpOS version) entries.\n\n[More](https://exposnitc.github.io/os_design-files/mem_ds.html#file_lock_status_table)"
             },
             {
                 "name" : "DISK_STATUS_TABLE",
@@ -1377,13 +1377,13 @@
             {
                 "name" : "OS_SECONDARY",
                 "insert_text" : "OS_SECONDARY",
-                "details" : "OS_SECONDARY = 65536",
+                "detail" : "OS_SECONDARY = 65536",
                 "documentation" : "## `OS_SECONDARY` Constant\n\nStarting address of OS Startup code for Secondary Code"
             },
             {
                 "name" :"INT_19",
                 "insert_text" : "INT_19",
-                "details" : "INT_19 = 66560 (NEXSM)",
+                "detail" : "INT_19 = 66560 (NEXSM)",
                 "documentation" : "### 0"
             }
         ]
@@ -1394,7 +1394,7 @@
             {
                 "name" : "if",
                 "insert_text" : "if (condn) then\n\t// statement;\nendif;",
-                "details":  "if Statement",
+                "detail":  "if Statement",
                 "documentation" : "### <Statement about if>",
                 "ranges" : [
 
@@ -1403,7 +1403,7 @@
             {
                 "name" : "if_else",
                 "insert_text" : "if (condn) then\n\t// on true condition;\nelse\n\t// on false condition;\nendif;",
-                "details" : "if-else Statement",
+                "detail" : "if-else Statement",
                 "documentation" : "### Statement about if-else",
                 "ranges" : [
                     
@@ -1412,7 +1412,7 @@
             {
                 "name" : "while",
                 "insert_text" : "while (1) do\n\t// do something;\nendwhile;",
-                "details" : "while statement",
+                "detail" : "while statement",
                 "documentation" : "### While Statement",
                 "ranges"  : [
 
