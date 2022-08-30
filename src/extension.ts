@@ -98,8 +98,7 @@ export function activate(context: vscode.ExtensionContext) {
   });
 
   // Provide alias symbol completions, if we need it.
-  const alias_regex =
-    /alias\s*([a-zA-Z\_]+[a-zA-Z0-9\_]*)\s*(R[01]?[\d]{1}|R[dcomp_items]{1}|SP|BP|IP|(?:P[0-3]))/gm;
+  const alias_regex = /alias\s*([a-zA-Z\_]+[a-zA-Z0-9\_])*\s*(R[01]?[\d]{1}|[R]{1}SP|BP|IP|P[0-3])\;/gm;
 
   let alias_objects: vscode.DocumentSymbol[] = [];
 
