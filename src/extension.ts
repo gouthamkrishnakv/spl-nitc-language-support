@@ -17,19 +17,19 @@ class SPLCompletionItem extends vscode.CompletionItem {
   /**
    * @name SPLCompletionItem
    * @param name The name of the completion item [shows up in completion pop-up]
-   * @param item_insert_text The text to be inserted when conpletion item is selected. Note that that does not need to be the same as completion name.
+   * @param itemInsertText The text to be inserted when conpletion item is selected. Note that that does not need to be the same as completion name.
    */
   constructor(
     name: string,
-    item_insert_text: string,
-    item_detail: string,
-    item_kind: vscode.CompletionItemKind,
-    item_documentation: string
+    itemInsertText: string,
+    itemDetail: string,
+    itemKind: vscode.CompletionItemKind,
+    itemDocumentation: string
   ) {
-    super(name, item_kind);
-    this.detail = item_detail;
-    this.insertText = item_insert_text;
-    this.documentation = new vscode.MarkdownString(item_documentation);
+    super(name, itemKind);
+    this.detail = itemDetail;
+    this.insertText = itemInsertText;
+    this.documentation = new vscode.MarkdownString(itemDocumentation);
     this.commitCharacters = ["=", ";", " "];
   }
 }
@@ -179,9 +179,9 @@ export function activate(context: vscode.ExtensionContext) {
       );
       for (var i = 0; i < initial_completion_suggestions.length; i++) {
         if (selected_text === initial_completion_suggestions[i].insertText) {
-          let hover_content = new vscode.MarkdownString(
-            `    ${selected_text}\n___\n`
-          );
+          // let hover_content = new vscode.MarkdownString(
+          //   `    ${selected_text}\n___\n`
+          // );
           return new vscode.Hover(
             initial_completion_suggestions[i].documentation ||
             "No definition exists for this token."
