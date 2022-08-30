@@ -177,17 +177,16 @@ export function activate(context: vscode.ExtensionContext) {
       let selected_text = document.getText(
         document.getWordRangeAtPosition(position)
       );
-      for (var i = 0; i < initial_completion_suggestions.length; i++) {
-        if (selected_text === initial_completion_suggestions[i].insertText) {
+      initial_completion_suggestions.forEach(suggestion => {
+        if (selected_text === suggestion.insertText) {
           // let hover_content = new vscode.MarkdownString(
           //   `    ${selected_text}\n___\n`
           // );
           return new vscode.Hover(
-            initial_completion_suggestions[i].documentation ||
-            "No definition exists for this token."
+            suggestion.documentation || "No definition exists for this token."
           );
         }
-      }
+      });
       return {
         contents: [` No definition exists for this token.`],
       };
