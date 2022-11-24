@@ -770,31 +770,31 @@
                 "name" : "GET_PCB_ENTRY",
                 "insert_text" : "GET_PCB_ENTRY",
                 "detail" : "Process Manager Function #1",
-                "documentation" : "### GET_PCB_ENTRY Function\n\nResource Manager Function #1"
+                "documentation" : "### GET_PCB_ENTRY Function\n\nProcess Manager Function #1"
             },
             {
                 "name" : "FREE_USER_AREA_PAGE",
                 "insert_text" : "FREE_USER_AREA_PAGE",
                 "detail" : "Process Manager Function #2",
-                "documentation" : "### FREE_USER_AREA_PAGE Function\n\nResource Manager Function #2"
+                "documentation" : "### FREE_USER_AREA_PAGE Function\n\nProcess Manager Function #2"
             },
             {
                 "name" : "EXIT_PROCESS",
                 "insert_text" : "EXIT_PROCESS",
                 "detail" : "Process Manager Function #4",
-                "documentation" : "### EXIT_PROCESS Function\n\nResource Manager Function #3"
+                "documentation" : "### EXIT_PROCESS Function\n\nProcess Manager Function #3"
             },
             {
                 "name" : "FREE_PAGE_TABLE",
                 "insert_text" : "FREE_PAGE_TABLE",
                 "detail" : "Process Manager Function #4",
-                "documentation" : "### FREE_PAGE_TABLE Function\n\nResource Manager Function #4"
+                "documentation" : "### FREE_PAGE_TABLE Function\n\nProcess Manager Function #4"
             },
             {
                 "name" : "KILL_ALL",
                 "insert_text" : "KILL_ALL",
                 "detail" : "Process Manager Function #5",
-                "documentation" : "### KILL_ALL Function\n\nResource Manager Function #5"
+                "documentation" : "### KILL_ALL Function\n\nProcess Manager Function #5"
             },
             {
                 "name" : "GET_FREE_PAGE",
@@ -803,7 +803,7 @@
                 "documentation" : "### GET_FREE_PAGE Function\n\nMemory Manager Function #1"
             },
             {
-                "name" : "RELEAEE_PAGE",
+                "name" : "RELEASE_PAGE",
                 "insert_text" : "RELEASE_PAGE",
                 "detail" : "Memory Manager Function #2",
                 "documentation" : "### RELEASE_PAGE Function\n\nMemory Manager Function #2"
@@ -1318,7 +1318,7 @@
             },
             {
                 "name" : "MAX_BUFFER",
-                "insert_text" : "MAX_Buffer",
+                "insert_text" : "MAX_BUFFER",
                 "detail" : "MAX_BUFFER = 4",
                 "documentation" : "## `MAX_BUFFER` Limit\n\nMaximum number of read/write buffers in eXpOS."
             },
