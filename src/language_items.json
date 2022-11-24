@@ -213,6 +213,18 @@
                 "documentation" : "#### Alias Statement `alias`\n\nAn `alias` statement is used to associate a register/port with a name.\n\nAlias statements can be used anywhere in the program.\n\n    alias counter R0;"
             },
             {
+                "name": "multipush",
+                "insert_text": "multipush",
+                "detail": "multipush (Register1, Register2, ...);",
+                "documentation" :  "#### Multipush Statement `multipush`\n\nMultipush statement is used to push a sequence of registers into the memory locations starting from the address pointed to by SP. The registers are pushed in the order in which they are specified in the statement.\n\n"
+            },
+            {
+                "name": "multipop",
+                "insert_text": "multipop",
+                "detail": "multipop (Register1, Register2, ...);",
+                "documentation" :  "#### Multipop Statement `multipop`\n\nMultipop statement is used to pop a sequence of registers from the memory locations starting from the address pointed to by SP. The registers are popped in the reverse order in which they are specified in the statement.\n\n"
+            },
+            {
                 "name" : "define",
                 "insert_text": "define",
                 "detail" : "define constant_name value",
