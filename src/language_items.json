@@ -1409,33 +1409,6 @@
     "SpecialCompletions" : {
         "type" : 3,
         "items" : [
-            {
-                "name" : "if",
-                "insert_text" : "if (condn) then\n\t// statement;\nendif;",
-                "detail":  "if Statement",
-                "documentation" : "### <Statement about if>",
-                "ranges" : [
-
-                ]
-            },
-            {
-                "name" : "if_else",
-                "insert_text" : "if (condn) then\n\t// on true condition;\nelse\n\t// on false condition;\nendif;",
-                "detail" : "if-else Statement",
-                "documentation" : "### Statement about if-else",
-                "ranges" : [
-                    
-                ]
-            },
-            {
-                "name" : "while",
-                "insert_text" : "while (1) do\n\t// do something;\nendwhile;",
-                "detail" : "while statement",
-                "documentation" : "### While Statement",
-                "ranges"  : [
-
-                ]
-            }
         ]
     }
 }
