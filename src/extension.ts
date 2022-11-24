@@ -30,7 +30,7 @@ class SPLCompletionItem extends vscode.CompletionItem {
     this.detail = itemDetail;
     this.insertText = itemInsertText;
     this.documentation = new vscode.MarkdownString(itemDocumentation);
-    this.commitCharacters = ["=", ";"];
+    this.commitCharacters = [";"];
   }
 }
 

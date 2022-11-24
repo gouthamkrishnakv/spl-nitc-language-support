@@ -219,6 +219,12 @@
                 "documentation" :  "#### Multipush Statement `multipush`\n\nMultipush statement is used to push a sequence of registers into the memory locations starting from the address pointed to by SP. The registers are pushed in the order in which they are specified in the statement.\n\n"
             },
             {
+                "name": "inline",
+                "insert_text": "inline",
+                "detail": "inline \"MACHINE INSTRUCTION\"",
+                "documentation" :  "#### Inline Statement `inline`\n\nThe inline statement is used to give XSM machine instructions directly within an SPL program.\n\n"
+            },
+            {
                 "name": "multipop",
                 "insert_text": "multipop",
                 "detail": "multipop (Register1, Register2, ...);",
