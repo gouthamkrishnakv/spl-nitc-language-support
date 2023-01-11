@@ -25,5 +25,23 @@
             "\t$2",
             "endwhile;"
         ]
+    },
+    "Multipush Statement" : {
+        "prefix" : "multipush",
+        "body" : [
+            "multipush ($1);"
+        ]
+    },
+    "Multipop Statement" : {
+        "prefix" : "multipop",
+        "body" : [
+            "multipop ($1);"
+        ]
+    },
+    "Inline Statement" : {
+        "prefix" : "inline",
+        "body" : [
+            "inline \"$1\";"
+        ]
     }
 }
